@@ -40,6 +40,11 @@
   color: var(--ink);
 }
 
+.navLinkActive {
+  color: var(--ink);
+  font-weight: 600;
+}
+
 .cta {
   font-size: 13px;
   font-weight: 600;

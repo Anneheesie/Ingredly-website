@@ -1,6 +1,10 @@
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import Logo from './Logo'
 import styles from './Header.module.css'
+
+function navClass({ isActive }: { isActive: boolean }) {
+  return isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink
+}
 
 export default function Header() {
   return (
@@ -10,8 +14,9 @@ export default function Header() {
           <Logo />
         </Link>
         <nav className={styles.nav}>
-          <Link to="/privacy" className={styles.navLink}>Privacy</Link>
-          <Link to="/support" className={styles.navLink}>Support</Link>
+          <NavLink to="/privacy" end className={navClass}>Privacy</NavLink>
+          <NavLink to="/terms" end className={navClass}>Gebruiksvoorwaarden</NavLink>
+          <NavLink to="/support" end className={navClass}>Support</NavLink>
         </nav>
         <span className={styles.cta}>Binnenkort beschikbaar</span>
       </div>
