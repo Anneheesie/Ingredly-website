@@ -1,12 +1,2 @@
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.wordmark {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.3px;
-}
+/* Logo layout is handled by IngredlyLockupHorizontal inline styles. */
+/* This file is kept as a placeholder in case wrapper styles are needed. */

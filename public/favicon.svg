@@ -1,7 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#2F7A4E"/>
-  <!-- i stem -->
-  <rect x="14" y="14" width="4" height="13" rx="2" fill="white"/>
-  <!-- i dot — oversized -->
-  <circle cx="16" cy="9" r="3.5" fill="#4A9D6C"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32">
+  <!-- Cream background at iOS app-icon corner ratio (22.5%) -->
+  <rect width="100" height="100" rx="22.5" fill="#F2EDDE"/>
+  <!-- Three-pill mark: exact geometry from IngredlyBrand.jsx spec -->
+  <rect x="14" y="28" width="72" height="13" rx="6.5" fill="#BBC8B5"/>
+  <rect x="22" y="44" width="56" height="13" rx="6.5" fill="#6F9079"/>
+  <rect x="30" y="60" width="40" height="13" rx="6.5" fill="#2F5340"/>
 </svg>

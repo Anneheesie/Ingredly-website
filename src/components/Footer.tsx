@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { IngredlyLockupHorizontal } from '../brand/IngredlyBrand'
 import styles from './Footer.module.css'
 
 export default function Footer() {
@@ -6,7 +7,9 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
-        <span className={styles.brand}>Ingredly</span>
+        <Link to="/" className={styles.brandLink}>
+          <IngredlyLockupHorizontal size={24} />
+        </Link>
         <nav className={styles.nav}>
           <Link to="/privacy" className={styles.link}>Privacyverklaring</Link>
           <Link to="/terms" className={styles.link}>Gebruiksvoorwaarden</Link>
