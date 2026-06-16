@@ -11,6 +11,8 @@
   gap: 24px;
 }
 
+/* ─── Page header ───────────────────────────────────────────────────────── */
+
 .pageHeader {
   display: flex;
   flex-direction: column;
@@ -32,15 +34,45 @@
   color: var(--ink);
   letter-spacing: -0.7px;
   line-height: 1.1;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+}
+
+/* Prominent date badge displayed directly below the title */
+.dateBadge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--brand-mist);
+  border: 1px solid var(--brand-soft);
+  color: var(--brand-deep);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 18px;
+  align-self: flex-start;
 }
 
 .intro {
-  font-size: 15px;
+  font-size: 14.5px;
   color: var(--ink-soft);
-  line-height: 1.65;
+  line-height: 1.7;
   font-weight: 400;
 }
+
+.introDisclaimer {
+  font-size: 13.5px;
+  color: var(--ink-muted);
+  line-height: 1.65;
+  font-weight: 400;
+  padding: 12px 16px;
+  background: var(--brand-mist);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  margin-top: 8px;
+}
+
+/* ─── Main card ─────────────────────────────────────────────────────────── */
 
 .card {
   background: var(--surface);
@@ -50,20 +82,42 @@
   box-shadow: var(--card-shadow);
 }
 
+/* ─── Section blocks (numbered h2 sections) ─────────────────────────────── */
+
 .block {
-  padding: 20px 0;
+  padding: 22px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionHeading {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.2px;
+  line-height: 1.3;
+}
+
+/* ─── Subsection blocks (h3 headings within a section) ──────────────────── */
+
+.subBlock {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding-top: 4px;
 }
 
-.blockHeading {
-  font-size: 15px;
-  font-weight: 600;
+.subHeading {
+  font-size: 13.5px;
+  font-weight: 700;
   color: var(--ink);
   letter-spacing: -0.1px;
   line-height: 1.3;
+  text-transform: none;
 }
+
+/* ─── Body content inside blocks ────────────────────────────────────────── */
 
 .blockBody {
   display: flex;
@@ -74,7 +128,7 @@
 .blockBody p {
   font-size: 13.5px;
   color: var(--ink-soft);
-  line-height: 1.65;
+  line-height: 1.7;
   font-weight: 400;
 }
 
@@ -82,13 +136,13 @@
   padding-left: 20px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
 }
 
 .blockBody li {
   font-size: 13.5px;
   color: var(--ink-soft);
-  line-height: 1.6;
+  line-height: 1.65;
   font-weight: 400;
 }
 
@@ -97,10 +151,33 @@
   color: var(--ink);
 }
 
+/* ─── Company info block (section 1) ─────────────────────────────────────── */
+
+.infoBlock {
+  background: var(--brand-mist);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.infoLine {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+/* ─── Dividers ──────────────────────────────────────────────────────────── */
+
 .divider {
   height: 1px;
   background: var(--line-soft);
 }
+
+/* ─── Links ─────────────────────────────────────────────────────────────── */
 
 .link {
   color: var(--brand-deep);
@@ -112,12 +189,16 @@
   opacity: 0.75;
 }
 
+/* ─── Footer note ────────────────────────────────────────────────────────── */
+
 .lastUpdated {
   font-size: 12px;
   color: var(--ink-muted);
   font-weight: 400;
   text-align: center;
 }
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
 
 @media (max-width: 600px) {
   .page {
