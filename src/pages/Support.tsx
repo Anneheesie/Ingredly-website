@@ -54,12 +54,7 @@ export default function Support() {
             <div className={styles.faqItem}>
               <strong>Ik ben mijn wachtwoord vergeten. Wat nu?</strong>
               <p>
-                Gebruik de "Wachtwoord vergeten"-optie in de Ingredly-app om een herstelmail te ontvangen.
-                Zie ook onze{' '}
-                <a href="/reset-password" className={styles.link}>
-                  wachtwoord herstellen
-                </a>
-                {' '}pagina.
+                Gebruik de "Wachtwoord vergeten"-optie in de Ingredly-app om je wachtwoord te herstellen.
               </p>
             </div>
           </div>
