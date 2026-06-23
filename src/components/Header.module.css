@@ -53,12 +53,66 @@
   flex-shrink: 0;
 }
 
+/* Hamburger button — hidden on desktop */
+.menuBtn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-left: auto;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.menuBtn:hover {
+  background: var(--brand-mist);
+}
+
+/* Mobile dropdown panel */
+.mobileNav {
+  padding: 4px 24px 12px;
+  border-top: 1px solid var(--line-soft);
+  background: rgba(244, 250, 246, 0.98);
+}
+
+.mobileNav .navLink {
+  display: block;
+  font-size: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.mobileNav .navLink:last-child {
+  border-bottom: none;
+}
+
+/* On desktop, never show the mobile panel even if JS state is open */
+@media (min-width: 601px) {
+  .mobileNav {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
-  .nav {
+  .inner {
     gap: 16px;
+  }
+
+  .nav {
+    display: none;
   }
 
   .cta {
     display: none;
+  }
+
+  .menuBtn {
+    display: flex;
   }
 }

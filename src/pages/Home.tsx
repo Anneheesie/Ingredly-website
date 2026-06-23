@@ -35,7 +35,7 @@ function AppMockup() {
           </div>
 
           <div className={styles.mockupPill} data-tone="amber">Let op</div>
-          <div className={styles.mockupSub}>Goede basis, maar bevat toegevoegde suikers.</div>
+          <div className={styles.mockupSub}>Bevat 3 ultrabewerkte ingrediënten.</div>
 
           {/* Insight cards */}
           <div className={styles.mockupEyebrow}>INZICHTEN</div>
@@ -64,8 +64,8 @@ function AppMockup() {
             {[
               { n: 1, name: 'Havervlokken', tag: 'Natuurlijk', tone: 'green' },
               { n: 2, name: 'Noten mix', tag: 'Natuurlijk', tone: 'green' },
-              { n: 3, name: 'Glucosestroop', tag: 'Bewerkt', tone: 'amber' },
-              { n: 4, name: 'Invertsuiker', tag: 'Vermijden', tone: 'red' },
+              { n: 3, name: 'Glucosestroop', tag: 'Ultrabewerkt', tone: 'red' },
+              { n: 4, name: 'Invertsuiker', tag: 'Ultrabewerkt', tone: 'red' },
             ].map((item) => (
               <div key={item.n} className={styles.mockupIngredientRow}>
                 <span className={styles.mockupIngredientIndex} data-tone={item.tone}>{item.n}</span>
