@@ -200,6 +200,16 @@ export default function Privacy() {
                   wordt vermeld.
                 </p>
                 <p>
+                  Ingredly verzamelt beperkte gebruiksgegevens om te begrijpen hoe de app wordt
+                  gebruikt en om de app te verbeteren. Voorbeelden zijn het openen van de app,
+                  het scannen van producten, foutcategorieën en algemene interacties zoals
+                  favorieten of vergelijkingen. We slaan hierbij geen volledige
+                  ingrediëntenlijsten, e-mailadressen, barcodes, productnamen of medische
+                  gegevens op. We gebruiken deze gegevens niet voor advertenties en verkopen ze
+                  niet aan derden. De gegevens worden opgeslagen in onze eigen database
+                  (Supabase) en worden alleen door Ingredly gebruikt.
+                </p>
+                <p>
                   De website <strong>ingredly.nl</strong> gebruikt in de MVP-versie geen
                   analyticscookies of marketingtracking.
                 </p>
