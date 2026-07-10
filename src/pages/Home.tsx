@@ -126,7 +126,22 @@ export default function Home() {
               en hoe bewerkt een product is.
             </p>
             <div className={styles.heroCtas}>
-              <span className={styles.btnPrimary}>Binnenkort beschikbaar</span>
+              <div className={styles.storeBadges}>
+                <a
+                  href="https://apps.apple.com/nl/app/ingredly/id6783845454"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Download Ingredly in de App Store"
+                  className={styles.appStoreBadgeLink}
+                >
+                  <img
+                    src="/assets/Download_on_the_App_Store_Badge_NL_RGB_blk_100317.svg"
+                    alt="Download in de App Store"
+                    className={styles.appStoreBadge}
+                  />
+                </a>
+                <span className={styles.androidPill}>Binnenkort op Google Play</span>
+              </div>
               <Link to="/privacy" className={styles.btnSecondary}>
                 Bekijk privacyverklaring
               </Link>
@@ -173,8 +188,23 @@ export default function Home() {
       {/* ── Final CTA ─────────────────────────────────────────────────────── */}
       <section className={styles.ctaSection}>
         <div className={styles.sectionInner}>
-          <h2 className={styles.ctaHeadline}>Ingredly komt binnenkort beschikbaar.</h2>
-          <span className={styles.btnPrimary}>Binnenkort beschikbaar</span>
+          <h2 className={styles.ctaHeadline}>Ingredly is nu beschikbaar in de App Store.</h2>
+          <div className={styles.storeBadges}>
+            <a
+              href="https://apps.apple.com/nl/app/ingredly/id6783845454"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download Ingredly in de App Store"
+              className={styles.appStoreBadgeLink}
+            >
+              <img
+                src="/assets/Download_on_the_App_Store_Badge_NL_RGB_blk_100317.svg"
+                alt="Download in de App Store"
+                className={styles.appStoreBadge}
+              />
+            </a>
+            <span className={styles.androidPill}>Binnenkort op Google Play</span>
+          </div>
           <p className={styles.ctaSub}>
             Vragen?{' '}
             <a href="mailto:support@ingredly.nl" className={styles.emailLink}>

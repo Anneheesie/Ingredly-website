@@ -24,7 +24,19 @@ export default function Header() {
           <NavLink to="/terms" end className={navClass}>Gebruiksvoorwaarden</NavLink>
           <NavLink to="/support" end className={navClass}>Support</NavLink>
         </nav>
-        <span className={styles.cta}>Binnenkort beschikbaar</span>
+        <a
+          href="https://apps.apple.com/nl/app/ingredly/id6783845454"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download Ingredly in de App Store"
+          className={styles.headerBadgeLink}
+        >
+          <img
+            src="/assets/Download_on_the_App_Store_Badge_NL_RGB_blk_100317.svg"
+            alt="Download in de App Store"
+            className={styles.headerBadge}
+          />
+        </a>
         <button
           className={styles.menuBtn}
           aria-expanded={menuOpen}

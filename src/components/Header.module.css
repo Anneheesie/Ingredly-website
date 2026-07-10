@@ -45,12 +45,17 @@
   font-weight: 600;
 }
 
-.cta {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--ink-muted);
-  letter-spacing: -0.1px;
+.headerBadgeLink {
+  display: inline-flex;
+  align-items: center;
   flex-shrink: 0;
+  line-height: 0;
+}
+
+.headerBadge {
+  height: 30px;
+  width: auto;
+  display: block;
 }
 
 /* Hamburger button — hidden on desktop */
@@ -108,7 +113,7 @@
     display: none;
   }
 
-  .cta {
+  .headerBadgeLink {
     display: none;
   }
 
