@@ -35,80 +35,77 @@ interface MarkProps {
   color?: string
 }
 
+// Official mark from the Ingredly logo kit (public/brand/logo/svg/ingredly-mark.svg).
+// Paths are copied verbatim — do not edit. Variant A on light, variant B on dark.
+// 'appAligned' renders variant A (kept for compatibility).
 export function IngredlyMark({ size = 100, variant = 'default', color }: MarkProps) {
-  let tone1: string, tone2: string, tone3: string
+  let back: string, middle: string, front: string
 
   if (variant === 'monochrome') {
-    tone1 = color ?? c.moss
-    tone2 = color ?? c.moss
-    tone3 = color ?? c.moss
+    back = color ?? '#000000'
+    middle = color ?? '#000000'
+    front = color ?? '#000000'
   } else if (variant === 'onDark') {
-    tone1 = c.cream
-    tone2 = c.sageLight
-    tone3 = c.sageMid
-  } else if (variant === 'appAligned') {
-    tone1 = c.brandSoft
-    tone2 = c.brand
-    tone3 = c.brandDeep
+    // Variant B
+    back = c.brandDeep   // #2F7A4E
+    middle = c.brand     // #4A9D6C
+    front = c.brandSoft  // #E3F2E8
   } else {
-    tone1 = c.sageLight
-    tone2 = c.sageMid
-    tone3 = c.moss
+    // Variant A
+    back = '#7AA688'
+    middle = c.brand     // #4A9D6C
+    front = c.moss       // #2F5340
   }
 
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100" fill="none" role="img" aria-label="Ingredly">
-      <rect x="14" y="28" width="72" height="13" rx="6.5" fill={tone1} />
-      <rect x="22" y="44" width="56" height="13" rx="6.5" fill={tone2} />
-      <rect x="30" y="60" width="40" height="13" rx="6.5" fill={tone3} />
+    <svg width={size} height={size} viewBox="0 0 1000 1000" fill="none" role="img" aria-label="Ingredly">
+      <path fill={back} fillRule="evenodd" d="M373.31 869.73A423.3 423.3 0 0 1 174.35 751.76A423.3 423.3 0 0 1 104.78 653.51A423.3 423.3 0 0 1 85.7 310.43A423.3 423.3 0 0 1 334.58 396.01A420.48 420.48 0 0 0 410.93 605.4A527.63 527.63 0 0 0 390.5 663.36A527.63 527.63 0 0 0 372.54 756.45A527.63 527.63 0 0 0 373.31 869.73Z" />
+      <path fill={middle} fillRule="evenodd" d="M424.59 575.48A392.35 392.35 0 0 1 529.21 40A392.35 392.35 0 0 1 675.2 330.97A527.63 527.63 0 0 0 424.59 575.48Z" />
+      <path fill={front} fillRule="evenodd" d="M421.03 959.46A499.5 499.5 0 0 1 400.3 761.5A499.5 499.5 0 0 1 424.47 649.01A499.5 499.5 0 0 1 595.19 411.84A499.5 499.5 0 0 1 694.71 352.99A499.5 499.5 0 0 1 918.62 310.43A499.5 499.5 0 0 1 904.7 649.01A499.5 499.5 0 0 1 840.72 761.5A499.5 499.5 0 0 1 694.71 891.36A499.5 499.5 0 0 1 595.19 935.89A499.5 499.5 0 0 1 421.03 959.46ZM595.19 525.38A51.92 51.92 0 0 0 694.71 525.38A51.92 51.92 0 0 0 694.71 495.72A51.92 51.92 0 0 0 595.19 495.72A51.92 51.92 0 0 0 595.19 525.38ZM694.71 761.5L694.71 649.01A49.76 49.76 0 0 0 595.19 649.01L595.19 761.5A49.76 49.76 0 1 0 694.71 761.5Z" />
     </svg>
   )
 }
 
 // ── Wordmark ──────────────────────────────────────────────────────────────────
+// Official wordmark from the logo kit (Poppins Bold, outlined, lowercase).
+// Rendered from the original SVG file — never as live text. Variant A only.
 
 interface WordmarkProps {
+  /** Rendered height in px. */
   size?: number
-  color?: string
 }
 
-export function IngredlyWordmark({ size = 28, color = c.ink }: WordmarkProps) {
+export function IngredlyWordmark({ size = 28 }: WordmarkProps) {
   return (
-    <span
-      style={{
-        fontFamily: "'Plus Jakarta Sans', 'DM Sans', system-ui, sans-serif",
-        fontSize: size,
-        fontWeight: 700,
-        color,
-        letterSpacing: '-0.02em',
-        lineHeight: 1,
-        display: 'inline-block',
-      }}
-    >
-      Ingredly
-    </span>
+    <img
+      src="/brand/logo/svg/ingredly-wordmark.svg"
+      alt="Ingredly"
+      height={size}
+      style={{ height: size, width: 'auto', display: 'inline-block' }}
+    />
   )
 }
 
 // ── Horizontal lockup ─────────────────────────────────────────────────────────
+// Official lockup from the logo kit. Variant A ('default') on light
+// backgrounds, variant B ('onDark') on dark backgrounds.
 
 interface LockupHorizontalProps {
+  /** Rendered height in px (the mark's height). Minimum width per guide: 90px. */
   size?: number
-  variant?: MarkVariant
-  color?: string
-  wordmarkColor?: string
+  variant?: 'default' | 'onDark'
 }
 
-export function IngredlyLockupHorizontal({
-  size = 36,
-  variant = 'default',
-  color,
-  wordmarkColor,
-}: LockupHorizontalProps) {
+export function IngredlyLockupHorizontal({ size = 36, variant = 'default' }: LockupHorizontalProps) {
+  const src = variant === 'onDark'
+    ? '/brand/logo/svg/ingredly-logo-horizontal-white.svg'
+    : '/brand/logo/svg/ingredly-logo-horizontal.svg'
   return (
-    <div style={{ display: 'inline-flex', alignItems: 'center', gap: size * 0.3 }}>
-      <IngredlyMark size={size} variant={variant} color={color} />
-      <IngredlyWordmark size={size * 0.78} color={wordmarkColor} />
-    </div>
+    <img
+      src={src}
+      alt="Ingredly"
+      height={size}
+      style={{ height: size, width: 'auto', display: 'inline-block' }}
+    />
   )
 }

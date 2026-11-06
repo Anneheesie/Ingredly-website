@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <Link to="/" className={styles.brandLink}>
-          <IngredlyLockupHorizontal size={24} />
+          <IngredlyLockupHorizontal size={26} />
         </Link>
         <nav className={styles.nav}>
           <Link to="/privacy" className={styles.link}>Privacyverklaring</Link>
