@@ -140,7 +140,19 @@ export default function Home() {
                     className={styles.appStoreBadge}
                   />
                 </a>
-                <span className={styles.androidPill}>Binnenkort op Google Play</span>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.anneheespelink.ingredly.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Download Ingredly op Google Play"
+                  className={styles.appStoreBadgeLink}
+                >
+                  <img
+                    src="/assets/nl_badge_web_generic.png"
+                    alt="Ontdek het op Google Play"
+                    className={styles.playStoreBadge}
+                  />
+                </a>
               </div>
               <Link to="/privacy" className={styles.btnSecondary}>
                 Bekijk privacyverklaring
@@ -188,7 +200,7 @@ export default function Home() {
       {/* ── Final CTA ─────────────────────────────────────────────────────── */}
       <section className={styles.ctaSection}>
         <div className={styles.sectionInner}>
-          <h2 className={styles.ctaHeadline}>Ingredly is nu beschikbaar in de App Store.</h2>
+          <h2 className={styles.ctaHeadline}>Ingredly is nu beschikbaar in de App Store en op Google Play.</h2>
           <div className={styles.storeBadges}>
             <a
               href="https://apps.apple.com/nl/app/ingredly/id6783845454"
@@ -203,7 +215,19 @@ export default function Home() {
                 className={styles.appStoreBadge}
               />
             </a>
-            <span className={styles.androidPill}>Binnenkort op Google Play</span>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.anneheespelink.ingredly.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download Ingredly op Google Play"
+              className={styles.appStoreBadgeLink}
+            >
+              <img
+                src="/assets/nl_badge_web_generic.png"
+                alt="Ontdek het op Google Play"
+                className={styles.playStoreBadge}
+              />
+            </a>
           </div>
           <p className={styles.ctaSub}>
             Vragen?{' '}

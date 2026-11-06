@@ -52,9 +52,25 @@
   line-height: 0;
 }
 
+.headerBadges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
 .headerBadge {
   height: 30px;
   width: auto;
+  display: block;
+}
+
+/* Google Play badge: crop the PNG's transparent padding (see Home.module.css)
+   so the visible badge matches the 30px App Store badge. */
+.headerPlayBadge {
+  height: 30px;
+  width: calc(30px * 646 / 192);
+  object-fit: cover;
   display: block;
 }
 
@@ -104,6 +120,12 @@
   }
 }
 
+@media (max-width: 820px) {
+  .headerBadges {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   .inner {
     gap: 16px;
@@ -113,7 +135,7 @@
     display: none;
   }
 
-  .headerBadgeLink {
+  .headerBadges {
     display: none;
   }
 

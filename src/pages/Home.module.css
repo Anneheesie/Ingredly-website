@@ -124,18 +124,14 @@
   display: block;
 }
 
-.androidPill {
-  display: inline-flex;
-  align-items: center;
+/* Official Google Play badge (646×250 PNG with 29px transparent padding top
+   and bottom; visible badge is 646×192). object-fit crops only that padding so
+   the visible badge is exactly as tall as the App Store badge. */
+.playStoreBadge {
   height: 44px;
-  padding: 0 16px;
-  border: 1.5px solid var(--line);
-  border-radius: 10px;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--ink-muted);
-  white-space: nowrap;
-  flex-shrink: 0;
+  width: calc(44px * 646 / 192);
+  object-fit: cover;
+  display: block;
 }
 
 .heroVisual {
@@ -551,9 +547,8 @@
     height: 40px;
   }
 
-  .androidPill {
+  .playStoreBadge {
     height: 40px;
-    font-size: 12px;
-    padding: 0 14px;
+    width: calc(40px * 646 / 192);
   }
 }

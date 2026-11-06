@@ -44,6 +44,14 @@
   margin-left: auto;
 }
 
+.trademarks {
+  width: 100%;
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
 @media (max-width: 600px) {
   .copy {
     margin-left: 0;

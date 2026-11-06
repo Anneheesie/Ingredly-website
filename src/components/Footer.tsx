@@ -17,6 +17,10 @@ export default function Footer() {
           <a href="mailto:support@ingredly.nl" className={styles.link}>support@ingredly.nl</a>
         </nav>
         <span className={styles.copy}>© {year} Ingredly</span>
+        <p className={styles.trademarks}>
+          Apple, het Apple-logo en App Store zijn handelsmerken van Apple Inc.
+          Google Play en het Google Play-logo zijn handelsmerken van Google LLC.
+        </p>
       </div>
     </footer>
   )

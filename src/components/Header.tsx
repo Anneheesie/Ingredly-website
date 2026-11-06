@@ -24,19 +24,34 @@ export default function Header() {
           <NavLink to="/terms" end className={navClass}>Gebruiksvoorwaarden</NavLink>
           <NavLink to="/support" end className={navClass}>Support</NavLink>
         </nav>
-        <a
-          href="https://apps.apple.com/nl/app/ingredly/id6783845454"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Download Ingredly in de App Store"
-          className={styles.headerBadgeLink}
-        >
-          <img
-            src="/assets/Download_on_the_App_Store_Badge_NL_RGB_blk_100317.svg"
-            alt="Download in de App Store"
-            className={styles.headerBadge}
-          />
-        </a>
+        <div className={styles.headerBadges}>
+          <a
+            href="https://apps.apple.com/nl/app/ingredly/id6783845454"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Download Ingredly in de App Store"
+            className={styles.headerBadgeLink}
+          >
+            <img
+              src="/assets/Download_on_the_App_Store_Badge_NL_RGB_blk_100317.svg"
+              alt="Download in de App Store"
+              className={styles.headerBadge}
+            />
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.anneheespelink.ingredly.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Download Ingredly op Google Play"
+            className={styles.headerBadgeLink}
+          >
+            <img
+              src="/assets/nl_badge_web_generic.png"
+              alt="Ontdek het op Google Play"
+              className={styles.headerPlayBadge}
+            />
+          </a>
+        </div>
         <button
           className={styles.menuBtn}
           aria-expanded={menuOpen}
